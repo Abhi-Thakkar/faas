@@ -43,12 +43,18 @@ set up circle ci config file to send the web app to code deployment agent in aws
 code deployment agent will deploy the web app to the instance.
 
 ## Steps to perform code deployment using terraform
-step-1 
+
+step-1:- bulid the AMI for the instance using curl command
+```bash
+curl -u account number of circleci \-d build_parameters[CIRCLE_JOB]=build \link of the git AMI repository 
+```
+
+step-2:
 ```bash
 terraform apply
 ```
 
-step-2:- after applying terraform deploy the web app code to circle ci using curl command
+step-3:- after applying terraform deploy the web app code to circle ci using curl command
 ```bash
-curl -u account number of circleci \-d build_parameters[CIRCLE_JOB]=build \link of the git repository
+curl -u account number of circleci \-d build_parameters[CIRCLE_JOB]=build \link of the git Web-app repository
 ```
