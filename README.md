@@ -33,7 +33,22 @@ python version 3
 
 ## Build and Deploy instructions for web application on AWS EC2 instance .
 create code deployment agent for the instance on which deployment is to performed.
+
 create code deployment group attached to the code deployment agent.
+
 setup a circle ci project to trigger the the web application .
+
 set up circle ci config file to send the web app to code deployment agent in aws .
+
 code deployment agent will deploy the web app to the instance.
+
+## Steps to perform code deployment using terraform
+step-1 
+```bash
+terraform apply
+```
+
+step-2:- after applying terraform deploy the web app code to circle ci using curl command
+```bash
+curl -u account number of circleci \-d build_parameters[CIRCLE_JOB]=build \link of the git repository
+```
