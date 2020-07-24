@@ -58,3 +58,8 @@ step-3:- after applying terraform deploy the web app code to circle ci using cur
 ```bash
 curl -u account number of circleci \-d build_parameters[CIRCLE_JOB]=build \link of the git Web-app repository
 ```
+
+step-4:- Build lambda function as a service using curl command
+```bash
+curl -u account number of circleci \-d build_parameters[CIRCLE_JOB]=build \link of the git fass repository
+``` 
