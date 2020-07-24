@@ -49,7 +49,7 @@ step-1:- bulid the AMI for the instance using curl command
 curl -u account number of circleci \-d build_parameters[CIRCLE_JOB]=build \link of the git AMI repository 
 ```
 
-step-2:
+step-2: Build the infrastructure i.e terraform 
 ```bash
 terraform apply
 ```
